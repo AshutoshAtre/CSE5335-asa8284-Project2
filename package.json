@@ -1,0 +1,32 @@
+{
+  "name": "cse-5335-project-2",
+  "version": "0.0.1",
+  "description": "Project to establish the client server components of a state-of-the-art web application",
+  "main": "server.js",
+  "author": "Ashutosh Atre",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "method-override": "^2.1.3",
+    "mongodb": "*",
+    "mongoose": "*"
+  },
+  "engines": {
+    "node": "4.6.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshutoshAtre/CSE5335-asa8284"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "mongo",
+    "mongoose"
+  ]
+}

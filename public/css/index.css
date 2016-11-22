@@ -1,0 +1,132 @@
+.index-wrapper{
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+}
+.index-wrapper .navbar{
+	background:#EEEEEE;
+}
+.index-wrapper .navbar-brand{
+	font-size: 24px;
+	color:#B22229 !important;
+	font-weight: bold;
+}
+.index-wrapper .jumbotron{
+	margin-top:80px;
+	padding:10px 30px 0px 30px;
+}
+.index-wrapper #footer{
+	padding: 0px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.index-wrapper #caption{
+	color: black;
+}
+.index-wrapper #value{
+	color: #B22229 ;
+	font-weight: bold;
+}
+.index-wrapper #map{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: gray;
+	height: 300px;
+	padding:0px;
+}
+.index-wrapper #places{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: gray;
+	height: 300px;
+	overflow: auto;
+}
+.index-wrapper .places-row{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: gray;
+	overflow: auto;
+}
+.index-wrapper .places-row > div{
+	padding: 2px;
+	text-align: center;
+	font-size: 14px;
+	border-width: 0px 1px 1px 0px;
+	border-style: dotted;
+	border-color: gray;
+}
+.index-wrapper .header{
+	font-weight: bold;
+	color:#B22229;
+}
+.index-wrapper .section-title{
+	text-align: center;
+	font-weight: bold;
+	color: #B22229;
+}
+.index-wrapper #graph{
+	height: 320px;
+	width: 100%;
+}
+.index-wrapper .title-row{
+	font-weight: bold;
+	color: #B22229;
+}
+.index-wrapper .imdb-title{
+	text-align: center;
+	font-weight: bold;
+	color:#B22229;
+}
+.index-wrapper .phase-separator{
+	border-color: gray;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+
+/* CSS for Graphs*/
+.axis path,
+.axis line{
+  fill: none;
+  stroke:black;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.axis text{
+  font-family: sans-serif;
+  font-size: 8px;
+}
+
+.tick
+{
+  stroke-dasharray: 1, 2;
+}
+
+/* CSS for loading icon */
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+/* CSS for new addition into ng-repeat*/
+.listItem.ng-enter {
+    background-color: green;
+    transition: all .2s ease;
+}

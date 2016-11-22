@@ -1,0 +1,78 @@
+{
+   "location" : [
+		{
+	    	"name" : "Walt Disney World", 
+			"latitude" : 28.419185,
+		    "longitude" : -81.582119
+	    },{
+	    	"name" : "Yellowstone National Park", 
+			"latitude" : 44.427968,
+		    "longitude" : -110.588454
+	    },{
+	    	"name" : "Grand Canyon", 
+			"latitude" : 36.054445,
+		    "longitude" : -112.140111
+	    },{
+	    	"name" : "Golden Gate Bridge", 
+			"latitude" : 37.819929,
+		    "longitude" : -122.478255
+	    },{
+	    	"name" : "Central Park", 
+			"latitude" : 40.771133,
+		    "longitude" : -73.974187
+	    },{
+	    	"name" : "Universal Studios Hollywood", 
+			"latitude" : 34.138634,
+		    "longitude" : -118.354429
+	    },{
+	    	"name" : "White House", 
+			"latitude" : 38.897676,
+		    "longitude" : -77.036530
+	    },{
+	    	"name" : "Great Smoky Mountains National Park", 
+			"latitude" : 35.611764,
+		    "longitude" : -83.489545
+	    },{
+	    	"name" : "Niagara Falls", 
+			"latitude" : 43.096214,
+		    "longitude" : -79.037739
+	    },{
+	    	"name" : "San Antanio River Walk", 
+			"latitude" : 29.422743,
+		    "longitude" : -98.489263
+	    }
+   ],
+   "visitors": [
+   		{
+   			"day" : 1,
+   			"visitors" : 121
+   		},{
+   			"day" : 2,
+   			"visitors" : 305
+   		},{
+   			"day" : 3,
+   			"visitors" : 50
+   		},{
+   			"day" : 4,
+   			"visitors" : 77
+   		},{
+   			"day" : 5,
+   			"visitors" : 201
+   		},{
+   			"day" : 6,
+   			"visitors" : 209
+   		},{
+   			"day" : 7,
+   			"visitors" : 10
+   		},{
+   			"day" : 8,
+   			"visitors" : 95
+   		},{
+   			"day" : 9,
+   			"visitors" : 155
+   		},{
+   			"day" : 10,
+   			"visitors" : 60
+   		}
+   ]
+}

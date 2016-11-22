@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html ng-app="projectOne">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>CSE 5335 Project 1- Phase 2</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	
+	
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js">
+	</script>
+	<link rel="stylesheet" href="/css/index.css">
+	<!--script src="/js/controllers/mainController.js"></script-->
+		 
+</head>
+<body class="index-wrapper" ng-controller="mainController">
+		<nav class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">CSE 5335 Project 1- Phase 2</a>
+	        </div>
+	      </div>
+	    </nav>
+		<div class="container">
+			<div class="jumbotron">
+				<div class="row">
+					<button type="button" ng-if="showButtonFlag" class="btn btn-success" ng-click="loadDataFromDb()">
+						<span ng-if="spinnerRotationFlag" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+						<span>{{buttonText}}</span>
+					</button>
+					<button type="button" ng-if="!showButtonFlag" class="btn btn-warning" ng-click="clearDataFromDb()">
+						Clear Data
+					</button>
+				</div>
+				<div class="imdb-title" ng-if="spinnerFlag">IMDB Top 250 Movies List</div>
+				<div class="row places-row" ng-if="spinnerFlag">
+					<div class="col-md-2 title-row">IMDB Id</div>
+					<div class="col-md-6 title-row">Movie Title</div>
+					<div class="col-md-2 title-row">Year Released</div>
+					<div class="col-md-2 title-row">Rating</div>
+				</div>
+				<div ng-repeat="movie in movieQueue | limitTo: -20 " class="row places-row listItem" ng-if="spinnerFlag">
+					<div class="col-md-2">{{movie.imdb_id}}</div>
+					<div class="col-md-6">{{movie.title}}</div>
+					<div class="col-md-2">{{movie.year}}</div>
+					<div class="col-md-2">{{movie.rating}}</div>
+				</div>
+				<div class="row phase-separator"></div>
+				<div class="row">
+					<button type="button" ng-if="!showProject1Flag" ng-click="showProject1()" class="btn btn-success">
+						Show Project 1 Details
+					</button>
+					<button type="button" ng-if="showProject1Flag" ng-click="hideProject1()" class="btn btn-warning">
+						Hide Project 1 Details
+					</button>
+				</div>
+				<div id="project1" ng-if="showProject1Flag">
+					<div class="row">
+						<button type="button" ng-if="hideMapFlag" ng-click="fetchMap()" class="btn btn-success">
+							Get Graphical Data
+						</button>
+						<button type="button" ng-if="!hideMapFlag" class="btn btn-warning" ng-click="hideMap()">
+							Hide Graphical Data
+						</button>
+					</div>
+					<div class="row section-title" ng-if="!hideMapFlag" >
+						Top Tourist places in USA
+					</div>
+					<div class="row">
+						<div class="col-md-5" id="map" ng-if="!hideMapFlag" >
+						</div>
+						<div class="col-md-1" ng-if="!hideMapFlag" ></div>
+						<div class="col-md-6" id="places" ng-if="!hideMapFlag">
+							<div class="row places-row">
+								<div class="col-md-6 header">Location</div>
+								<div class="col-md-3 header">Latitude</div>
+								<div class="col-md-3 header">Longitude</div>
+							</div>
+							<div ng-repeat="location in locations" class="row places-row">
+								<div class="col-md-6">{{location.name}}</div>
+								<div class="col-md-3">{{location.latitude}}</div>
+								<div class="col-md-3">{{location.longitude}}</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<button type="button" ng-if="hideGraphFlag" ng-click="fetchGraph()" class="btn btn-success">
+							Get Numerical Data
+						</button>
+						<button type="button" ng-if="!hideGraphFlag" class="btn btn-warning" ng-click="hideGraph()">
+							Hide Numerical Data
+						</button>
+					</div>
+					<div class="row section-title" ng-if="!hideGraphFlag" >
+						Visitors Data
+					</div>
+					<div class="row" ng-if="!hideGraphFlag">
+
+						<div linear-chart chart-data="visitors"></div>
+					</div>
+				</div>
+				<div class="row" id="footer">
+					<span id="caption">Developed By: </span>
+					<span id="value">Ashutosh Atre (ID: 1001178284)</span>
+				</div>
+			</div>
+		</div>	
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNpBNjDwgNtPJjzvyfILlZaCKfqfVxp5I&libraries=places">
+    </script>
+    <script src="/js/app.js"></script> 
+    <script src="/js/controllers/mainController.js"></script>
+    <script src="/js/directives/directives.js"></script>
+</body>
+</html>
