@@ -200,7 +200,7 @@ angular.module('projectOne')
         // function to fetch one record at a time from server
         $scope.loadOneRecord = function(){
             if($scope.counter <= $scope.dbSize){
-                req_i.url = 'https://cse5335-asa8284-project2.herokuapp.com/getMovie' + $scope.counter;
+                req_i.url = 'https://cse5335-asa8284-project2.herokuapp.com/getMovie/' + $scope.counter;
                 $http(req_i).then(function(response) {
                     //success callback
                     if (response.status == 200) {
