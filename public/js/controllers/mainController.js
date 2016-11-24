@@ -21,8 +21,8 @@ angular.module('projectOne')
         // Request definition
         var req = {
             method: 'GET',
-            //url: 'https://cse5335-asa8284.herokuapp.com/getLocations',
-            url: 'http://localhost:8081/getData',
+            //url: 'https://cse5335-asa82840-project2.herokuapp.com/getLocations',
+            //url: 'http://localhost:8081/getData',
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -31,8 +31,8 @@ angular.module('projectOne')
         // Request ith record 
         var req_i = {
             method: 'GET',
-            //url: 'https://cse5335-asa8284.herokuapp.com/getLocations',
-            url: 'http://localhost:8081/getMovie/',
+            url: 'https://cse5335-asa82840-project2.herokuapp.com/getMovie/',
+            //url: 'http://localhost:8081/getMovie/',
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -142,8 +142,8 @@ angular.module('projectOne')
         // Database connection request which fetches the size of collection movie in mongodb.
         var db_req = {
             method: 'GET',
-            //url: 'https://cse5335-asa8284.herokuapp.com/getLocations',
-            url: 'http://localhost:8081/connectToDatabase',
+            url: 'https://cse5335-asa8284-project2.herokuapp.com/connectToDatabase',
+            //url: 'http://localhost:8081/connectToDatabase',
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -200,7 +200,7 @@ angular.module('projectOne')
         // function to fetch one record at a time from server
         $scope.loadOneRecord = function(){
             if($scope.counter <= $scope.dbSize){
-                req_i.url = 'http://localhost:8081/getMovie/' + $scope.counter;
+                req_i.url = 'https://cse5335-asa82840-project2.herokuapp.com/getMovie' + $scope.counter;
                 $http(req_i).then(function(response) {
                     //success callback
                     if (response.status == 200) {
