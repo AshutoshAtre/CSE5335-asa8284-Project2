@@ -21,7 +21,7 @@ angular.module('projectOne')
         // Request definition
         var req = {
             method: 'GET',
-            url: 'https://cse5335-asa82840-project2.herokuapp.com/getLocations',
+            url: 'https://cse5335-asa8284-project2.herokuapp.com/getLocations',
             //url: 'http://localhost:8081/getData',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ angular.module('projectOne')
         // Request ith record 
         var req_i = {
             method: 'GET',
-            url: 'https://cse5335-asa82840-project2.herokuapp.com/getMovie/',
+            url: 'https://cse5335-asa8284-project2.herokuapp.com/getMovie/',
             //url: 'http://localhost:8081/getMovie/',
             headers: {
                 'Content-Type': 'application/json'
@@ -200,7 +200,7 @@ angular.module('projectOne')
         // function to fetch one record at a time from server
         $scope.loadOneRecord = function(){
             if($scope.counter <= $scope.dbSize){
-                req_i.url = 'https://cse5335-asa82840-project2.herokuapp.com/getMovie' + $scope.counter;
+                req_i.url = 'https://cse5335-asa8284-project2.herokuapp.com/getMovie' + $scope.counter;
                 $http(req_i).then(function(response) {
                     //success callback
                     if (response.status == 200) {
